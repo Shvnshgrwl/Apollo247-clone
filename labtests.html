@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="lab.css" >
+    
+</head>
+    
+       <div id="head" >
+            <div class="headL">
+                <img src="https://newassets.apollo247.com/images/ic_logo.png"/>
+            </div>
+            <div  class="headR" style="margin-left:15%">
+                <div onclick="window.location.href='doctors.html'" class="navL">
+                    <h5>DOCTORS</h5>
+                    <p>Consult <br> Online</p>
+                </div>
+                <div  onclick="window.location.href='pharmacy.html'" class="navL">
+                   <h5>PHARMACY</h5>
+                   <p>Medicines & other product</p>
+                </div>
+                <div  onclick="window.location.href='labtests.html'" class="navL">
+                   <h5>LAB TEST</h5>
+                   <p>Health<br>check-ups</p>
+                </div>
+                <div onclick="window.location.href='covid.html'" class="navL">
+                    <h5>CIRCLE</h5>
+               <p>Free Delivery & Cashback</p>
+                </div>
+                <div  class="navImg"onclick="window.location.href='cart.html'">
+                    <img  class="navlogo" src="https://thumbs.dreamstime.com/b/high-quality-dark-blue-shopping-cart-icon-high-quality-dark-blue-shopping-cart-icon-pictogram-icon-set-illustration-useful-web-192534364.jpg"/>
+                </div>
+                <div class="navImg" onclick="window.location.href='signup.html'">
+                    <img class="navlogo" src="data:image/png;base64,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"/>
+                </div>
+            </div>
+        </div>
+        <div id="container" style="background-color: white;">
+        <div class="first">
+           <input class="searchbar" placeholder="Search test and packages">
+           <button class="firstord">My Orders ></button>
+        </div>   
+        <div class="firstimgdiv">
+            <img class="firstimg" src="https://newassets.apollo247.com/cms/2021-07/Diagnostics-Banner-Fever-Web_28072021.jpg">
+            <div class="imgtext">
+                <h3>Upload Prescription to place an order</h3>
+                <button class="firstbtn">UPLOAD NOW</button>
+            </div>
+        </div>
+        <div class="popcategory">
+            <div class="poptype">
+                <div style="font-weight: bolder; color: #225e6f;">POPULAR CATEGORIES (31)</div>
+                <div style="font-size: 14px; color: #fcaf7a; font-weight: bolder;">VIEW ALL</div>
+            </div>
+            <div class="popimages">
+                <div><img src="https://newassets.apollo247.com/cms/2021-06/infection.png">
+                 <p>Covid 19</p>
+                </div>
+                <div>
+                    <img src="https://newassets.apollo247.com/cms/2021-07/Senior%20citizen.png">
+                    <p>Senior Citizen</p>
+                </div>
+                <div>
+                    <img src="https://newassets.apollo247.com/cms/2021-05/fever.png">
+                    <p>Fever</p>
+                </div>
+                <div>
+                    <img src="https://newassets.apollo247.com/cms/2021-05/diabetes_0.png">
+                    <p>Diabetes</p>
+                </div>
+                <div>
+                    <img src="https://newassets.apollo247.com/cms/2021-07/Women%20health_0.png">
+                    <p>Womens health</p>
+                </div>
+                <div>
+                    <img src="https://newassets.apollo247.com/cms/2021-05/anemia.png">
+                    <p>Anemia</p>
+                </div>
+                <div>
+                    <img src="https://newassets.apollo247.com/cms/2021-07/Full%20body.png">
+                    <p>Full Body che..</p>
+                </div>
+            </div>
+        </div>
+        <div class="popcategory">
+            <div class="poptype">
+                <div style="font-weight: bolder; color: #225e6f;">POPULAR HEALTH CHECKUP PACKAGES (84)</div>
+                <div style="font-size: 14px; color: #fcaf7a; font-weight: bolder;">VIEW ALL</div>
+            </div>
+            <div class="poppackage">
+                <div>
+                    <p class="h1">Special Health Package</p>
+                    <p class="h1">Premium</p>
+                    <p class="h2">TOTAL INCLUSIONS : 63</p>
+                    <P class="h3">Hba1c, Glycated Hemoglobin</P>
+                    <div class="h3" style="display: flex; margin-top: -12px;">
+                        <p>Estimated Average Glucose</p>
+                        <p style="color: #fdb454; font-weight: bold; margin-left: 2px;">+58 More</p>
+                    </div>
+                    <hr>
+                    <div class="popimage">
+                        <img src="https://newassets.apollo247.com/images/circle_logo.png" style="margin-left: 12px;">
+                        <p class="h3">Price ₹ 2400</p>
+                    </div>
+                    <div style="display: flex;">
+                       <p class="h3" style="text-decoration: line-through;">MRP ₹ 6530</p>
+                       <p class="h3" style="margin-left: 10px; font-weight: bold; color: #3faf5e;">57% off</p>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <div style="display: flex;">
+                            <p class="h1" style="margin: 0px; margin-left: 12px; margin-bottom: 12px;">₹ 2824</p>
+                            <p class="h3" style="margin-top: 4px; margin-left: 5px ;">save</p>
+                            <p class="h2" style="margin-top: 5px; margin-left: 5px;">₹3706</p>
+                        </div>
+                        <div onclick="b1()" class="h1" style="color: #fdb454; margin-right: 12px;">ADD TO CART</div>
+                    </div>
+                </div>
+                <div>
+                    <p class="h1">Compherensive Package - </p>
+                    <p class="h1">Women</p>
+                    <p class="h2">TOTAL INCLUSIONS : 65</p>
+                    <P class="h3">Hba1c, Glycated Hemoglobin</P>
+                    <div class="h3" style="display: flex; margin-top: -12px;">
+                        <p>Estimated Average Glucose</p>
+                        <p style="color: #fdb454; font-weight: bold; margin-left: 2px;">+61 More</p>
+                    </div>
+                    <hr>
+                    <div class="popimage">
+                        <img src="https://newassets.apollo247.com/images/circle_logo.png" style="margin-left: 12px;">
+                        <p class="h3">Price ₹ 1999</p>
+                    </div>
+                    <div style="display: flex;">
+                        <p class="h3" style="text-decoration: line-through;">MRP ₹ 6630</p>
+                        <p class="h3" style="margin-left: 10px; font-weight: bold; color: #3faf5e;">65% off</p>
+                     </div>
+                     <div style="display: flex; justify-content: space-between;">
+                        <div style="display: flex;">
+                            <p class="h1" style="margin: 0px; margin-left: 12px; margin-bottom: 12px;">₹ 2352</p>
+                            <p class="h3" style="margin-top: 4px; margin-left: 5px ;">save</p>
+                            <p class="h2" style="margin-top: 5px; margin-left: 5px;">₹4278</p>
+                        </div>
+                        <div onclick="b2()" class="h1" style="color: #fdb454; margin-right: 12px;">ADD TO CART</div>
+                    </div>
+                </div>
+                <div>
+                    <p class="h1">Diabetes And Liquid Profile</p>
+                    <p class="h1">Premium</p>
+                    <p class="h2">TOTAL INCLUSIONS : 12</p>
+                    <P class="h3">Hba1c, Glycated Hemoglobin</P>
+                    <div class="h3" style="display: flex; margin-top: -12px;">
+                        <p>Estimated Average Glucose</p>
+                        <p style="color: #fdb454; font-weight: bold; margin-left: 2px;">+6 More</p>
+                    </div>
+                    <hr>
+                    <div class="popimage">
+                        <img src="https://newassets.apollo247.com/images/circle_logo.png" style="margin-left: 12px;">
+                        <p class="h3">Price ₹ 698</p>
+                    </div>
+                    <div style="display: flex;">
+                        <p class="h3" style="text-decoration: line-through;">MRP ₹ 1170</p>
+                        <p class="h3" style="margin-left: 10px; font-weight: bold; color: #3faf5e;">54% off</p>
+                     </div>
+                     <div style="display: flex; justify-content: space-between;">
+                        <div style="display: flex;">
+                            <p class="h1" style="margin: 0px; margin-left: 12px; margin-bottom: 12px;">₹ 822</p>
+                            <p class="h3" style="margin-top: 4px; margin-left: 5px ;">save</p>
+                            <p class="h2" style="margin-top: 5px; margin-left: 5px;">₹948</p>
+                        </div>
+                        <div onclick="b3()" class="h1" style="color: #fdb454; margin-right: 12px;">ADD TO CART</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bar">
+            <div style="display: flex;">
+                <img src="https://newassets.apollo247.com/images/ic_workflow.png" style="margin-top: 10px ; margin-left: 10px; margin-bottom: 10px;">
+                <div class="btext">3 simple steps to get a lab test done from the comfort of your home.</div>
+            </div>
+            <div class="barrow"><img src="https://newassets.apollo247.com/images/ic_back.png"></div>         
+        </div>
+        <div class="multiple">
+            <div class="poptype">
+                <div style="font-weight: bolder; color: #225e6f;">TOTAL BOOKED TEST (16)</div>
+                <div style="font-size: 14px; color: #fcaf7a; font-weight: bolder;">VIEW ALL</div>
+            </div>
+            <div class="mboxes">
+                <div>
+                    <img src="https://newassets.apollo247.com/organs/virus.png">
+                    <p class="h11">Covid 19 RTPCR</p>
+                    <p class="h11">With Home..</p>
+                    <p class="h22">3 Parameters incuded</p>
+                    <hr>
+                    <div class="mbottom">
+                        <img src="https://newassets.apollo247.com/images/circle_logo.png" style="margin-left: 6px;">
+                        <p class="h33">Price ₹ 504</p>
+                    </div>
+                    <div class="h11" style="margin-top: 20px; font-weight: bold;">₹ 750</div>
+                    <div onclick="m11()" class="h44">ADD TO CART</div>
+                </div>
+                <div>
+                    <img src="https://newassets.apollo247.com/organs/ic_blood.png">
+                    <p class="h11">Complete Blood</p>
+                    <p class="h11">Count (CBC)</p>
+                    <p class="h22">13 Parameters incuded</p>
+                    <hr>
+                    <div class="mbottom">
+                        <img src="https://newassets.apollo247.com/images/circle_logo.png" style="margin-left: 6px;">
+                        <p class="h33">Price ₹ 306</p>
+                    </div>
+                    <div class="h11" style="margin-top: 20px; font-weight: bold;">₹ 360</div>
+                    <div onclick="m12()" class="h44">ADD TO CART</div>
+                </div>
+                <div>
+                    <img src="https://newassets.apollo247.com/organs/ic_blood.png">
+                    <p class="h11">C-Reactive</p>
+                    <p class="h11">Protein...</p>
+                    <p class="h22">1 Parameters incuded</p>
+                    <hr>
+                    <div class="mbottom">
+                        <img src="https://newassets.apollo247.com/images/circle_logo.png" style="margin-left: 6px;">
+                        <p class="h33">Price ₹ 416</p>
+                    </div>
+                    <div class="h11" style="margin-top: 20px; font-weight: bold;">₹ 490</div>
+                    <div onclick="m13()" class="h44">ADD TO CART</div>
+                </div>
+                <div>
+                    <img src="https://newassets.apollo247.com/organs/ic_thyroid.png">
+                    <p class="h11">Thyroid Profile -</p>
+                    <p class="h11">Free (FT3, FT4, ...</p>
+                    <p class="h22">4 Parameters incuded</p>
+                    <hr>
+                    <div class="mbottom">
+                        <img src="https://newassets.apollo247.com/images/circle_logo.png" style="margin-left: 6px;">
+                        <p class="h33">Price ₹ 748</p>
+                    </div>
+                    <div class="h11" style="margin-top: 20px; font-weight: bold;">₹ 880</div>
+                    <div onclick="m14()" class="h44">ADD TO CART</div>
+                </div>
+                <div>
+                    <img src="https://newassets.apollo247.com/organs/ic_liver.png">
+                    <p class="h11">Liver Function</p>
+                    <p class="h11">Test (LFT)</p>
+                    <p class="h22">10 Parameters incuded</p>
+                    <hr>
+                    <div class="mbottom">
+                        <img src="https://newassets.apollo247.com/images/circle_logo.png" style="margin-left: 6px;">
+                        <p class="h33">Price ₹ 595</p>
+                    </div>
+                    <div class="h11" style="margin-top: 20px; font-weight: bold;">₹ 700</div>
+                    <div onclick="m15()" class="h44">ADD TO CART</div>
+                </div>
+                <div>
+                    <img src="https://newassets.apollo247.com/organs/ic_blood.png">
+                    <p class="h11">Complete Urine</p>
+                    <p class="h11">Examination</p>
+                    <p class="h22">15 Parameters incuded</p>
+                    <hr>
+                    <div class="mbottom">
+                        <img src="https://newassets.apollo247.com/images/circle_logo.png" style="margin-left: 6px;">
+                        <p class="h33">Price ₹ 204</p>
+                    </div>
+                    <div class="h11" style="margin-top: 20px; font-weight: bold;">₹ 240</div>
+                    <div onclick="m16()" class="h44">ADD TO CART</div>
+                </div>
+            </div>
+        </div>
+        <div class="multiple">
+            <div class="poptype">
+                <div style="font-weight: bolder; color: #225e6f;">DIABETEES SCREENING (27)</div>
+                <div style="font-size: 14px; color: #fcaf7a; font-weight: bolder;">VIEW ALL</div>
+            </div>
+            <div class="mboxes">
+                <div>
+                    <img src="https://newassets.apollo247.com/organs/ic_diabetes.png">
+                    <p class="h11">Diabetes And</p>
+                    <p class="h11">Liquid Profile</p>
+                    <p class="h22">12 Parameters incuded</p>
+                    <hr> 
+                    <div class="popimage">
+                        <img src="https://newassets.apollo247.com/images/circle_logo.png" style="margin-left: 12px;">
+                        <p class="h3">Price ₹ 698</p>
+                    </div>
+                    <div style="display: flex;">
+                        <p class="h3" style="text-decoration: line-through;">MRP ₹ 1770</p>
+                        <p class="h3" style="margin-left: 10px; font-weight: bold; color: #3faf5e;">54% off</p>
+                     </div>
+                     <div style="display: flex; justify-content: space-between;">
+                        <div style="display: flex;">
+                            <p class="h1" style="margin: 0px; margin-left: 12px; margin-bottom: 12px;">₹ 822</p>
+                            <p class="h3" style="margin-top: 4px; margin-left: 5px ;">savings</p>
+                            <p class="h2" style="margin-top: 5px; margin-left: 5px;">₹948</p>
+                        </div>
+                    </div>
+                    <div onclick="m21()" class="h1" style="color: #fdb454; margin-right: 12px;">ADD TO CART</div>
+                </div>
+                <div>
+                    <img src="https://newassets.apollo247.com/organs/ic_diabetes.png">
+                    <p class="h11">Diabetees</p>
+                    <p class="h11">Screening</p>
+                    <p class="h22">4 Parameters incuded</p>
+                    <hr> 
+                    <div class="popimage">
+                        <img src="https://newassets.apollo247.com/images/circle_logo.png" style="margin-left: 12px;">
+                        <p class="h3">Price ₹ 398</p>
+                    </div>
+                    <div style="display: flex;">
+                        <p class="h3" style="text-decoration: line-through;">MRP ₹ 600</p>
+                        <p class="h3" style="margin-left: 10px; font-weight: bold; color: #3faf5e;">31% off</p>
+                     </div>
+                     <div style="display: flex; justify-content: space-between;">
+                        <div style="display: flex;">
+                            <p class="h1" style="margin: 0px; margin-left: 12px; margin-bottom: 12px;">₹ 469</p>
+                            <p class="h3" style="margin-top: 4px; margin-left: 5px ;">savings</p>
+                            <p class="h2" style="margin-top: 5px; margin-left: 5px;">₹211</p>
+                        </div>
+                    </div>
+                    <div onclick="m22()" class="h1" style="color: #fdb454; margin-right: 12px;">ADD TO CART</div>
+                </div>
+                <div>
+                    <img src="https://newassets.apollo247.com/organs/ic_diabetes.png">
+                    <p class="h11">Diabetes Package</p>
+                    <p class="h11">Basic</p>
+                    <p class="h22">19 Parameters incuded</p>
+                    <hr> 
+                    <div class="popimage">
+                        <img src="https://newassets.apollo247.com/images/circle_logo.png" style="margin-left: 12px;">
+                        <p class="h3">Price ₹ 499</p>
+                    </div>
+                    <div style="display: flex;">
+                        <p class="h3" style="text-decoration: line-through;">MRP ₹ 920</p>
+                        <p class="h3" style="margin-left: 10px; font-weight: bold; color: #3faf5e;">36% off</p>
+                     </div>
+                     <div style="display: flex; justify-content: space-between;">
+                        <div style="display: flex;">
+                            <p class="h1" style="margin: 0px; margin-left: 12px; margin-bottom: 12px;">₹ 588</p>
+                            <p class="h3" style="margin-top: 4px; margin-left: 5px ;">savings</p>
+                            <p class="h2" style="margin-top: 5px; margin-left: 5px;">₹322</p>
+                        </div>
+                    </div>
+                    <div onclick="m23()" class="h1" style="color: #fdb454; margin-right: 12px;">ADD TO CART</div>
+                </div>
+                <div>
+                    <img src="https://newassets.apollo247.com/organs/ic_diabetes.png">
+                    <p class="h11">Diabetes Package</p>
+                    <p class="h11">Advance</p>
+                    <p class="h22">42 Parameters incuded</p>
+                    <hr> 
+                    <div class="popimage">
+                        <img src="https://newassets.apollo247.com/images/circle_logo.png" style="margin-left: 12px;">
+                        <p class="h3">Price ₹ 1598</p>
+                    </div>
+                    <div style="display: flex;">
+                        <p class="h3" style="text-decoration: line-through;">MRP ₹ 2450</p>
+                        <p class="h3" style="margin-left: 10px; font-weight: bold; color: #3faf5e;">23% off</p>
+                     </div>
+                     <div style="display: flex; justify-content: space-between;">
+                        <div style="display: flex;">
+                            <p class="h1" style="margin: 0px; margin-left: 12px; margin-bottom: 12px;">₹ 1881</p>
+                            <p class="h3" style="margin-top: 4px; margin-left: 5px ;">save</p>
+                            <p class="h2" style="margin-top: 5px; margin-left: 5px;">₹569</p>
+                        </div>
+                    </div>
+                    <div onclick="m24()" class="h1" style="color: #fdb454; margin-right: 12px;">ADD TO CART</div>
+                </div>
+                <div>
+                    <img src="https://newassets.apollo247.com/organs/ic_blood.png">
+                    <p class="h11">Liquid Profile</p>
+                    <p class="h11" style="color: white;">Test (LFT)</p>
+                    <p class="h22">6 Parameters incuded</p>
+                    <hr>
+                    <div class="mbottom">
+                        <img src="https://newassets.apollo247.com/images/circle_logo.png" style="margin-left: 6px;">
+                        <p class="h33">Price ₹ 522</p>
+                    </div>
+                    <div class="h11" style="margin-top: 20px; font-weight: bold;">₹ 650</div>
+                    <div onclick="m25()" class="h44">ADD TO CART</div>
+                </div>  
+                <div>
+                    <img src="https://newassets.apollo247.com/organs/ic_blood.png">
+                    <p class="h11">HbA1c, Glycated</p>
+                    <p class="h11">Hemoglobin</p>
+                    <p class="h22">2 Parameters incuded</p>
+                    <hr>
+                    <div class="mbottom">
+                        <img src="https://newassets.apollo247.com/images/circle_logo.png" style="margin-left: 6px;">
+                        <p class="h33">Price ₹ 510</p>
+                    </div>
+                    <div class="h11" style="margin-top: 20px; font-weight: bold;">₹ 600</div>
+                    <div onclick="m26()" class="h44">ADD TO CART</div>
+                </div>     
+            </div>
+        </div>
+        <div class="bigbar">
+            <div class="bbtype">WHY BOOK WITH US?</div>
+            <div class="bbimages">
+                <div class="bbinner">
+                    <div>
+                        <img src="https://newassets.apollo247.com/images/ic_surface.png">
+                        <p class="bbh1">3.5</p>
+                        <p class="bbh2">Million tests every year</p>
+                    </div>
+                    <div>
+                        <img src="https://newassets.apollo247.com/images/ic_legacy.png">
+                        <p class="bbh1">36</p>
+                        <p class="bbh2">Years of legacy</p>
+                    </div>
+                    <div>
+                        <img src="https://newassets.apollo247.com/images/ic_laboratories.png">
+                        <p class="bbh1">100+</p>
+                        <p class="bbh2">Laboritres</p>
+                    </div>
+                    <div>
+                        <img src="https://newassets.apollo247.com/images/ic_cities.png">
+                        <p class="bbh1">30+ Cities &</p>
+                        <p class="bbh2">700+ Collection centers</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cards">
+            <div>
+                <div class="cartype">
+                    <p>VITAL ORGANS (8)</p>
+                    <P style="color: #fcb716; font-size: 15px;">VIEW ALL</P>
+                </div>
+                <div class="carimages">
+                    <div class="carline1">
+                        <div style="border-right: 1px solid lightgrey;">
+                            <img src="https://newassets.apollo247.com/cms/2021-07/Full%20body.png">
+                            <p>Full Body Ch...</p>
+                        </div>
+                        <div style="border-right: 1px solid lightgrey;">
+                            <img src="https://newassets.apollo247.com/cms/2021-05/kidney.png">
+                            <p>Kidney</p>
+                        </div>
+                        <div style="border-right: 1px solid lightgrey;">
+                            <img src="https://newassets.apollo247.com/cms/2021-05/heart.png">
+                            <p>Heart</p>
+                        </div>
+                        <div>
+                            <img src="https://newassets.apollo247.com/cms/2021-05/jointpain_0.png">
+                            <p>Joint Pain</p>
+                        </div>
+                    </div>
+                    <div class="carline3">
+                        <div style="border-right: 1px solid lightgrey;">
+                            <img src="https://newassets.apollo247.com/cms/2021-05/thyroid.png">
+                            <p>Thyroid</p>
+                        </div>
+                        <div style="border-right: 1px solid lightgrey;">
+                            <img src="https://newassets.apollo247.com/cms/2021-05/liver.png">
+                            <p>Liver</p>
+                        </div>
+                        <div style="border-right: 1px solid lightgrey;">
+                            <img src="https://newassets.apollo247.com/cms/2021-05/bone.png">
+                            <p>Bone</p>
+                        </div>
+                        <div>
+                            <img src="https://newassets.apollo247.com/cms/2021-05/lungs.png">
+                            <p>Lungs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="cartype">
+                    <p>WOMEN CARE (4)</p>
+                    <P style="color: #fcb716; font-size: 15px;">VIEW ALL</P>
+                </div>
+                <div class="carimages">
+                    <div class="carline1">
+                        <div style="border-right: 1px solid lightgrey;">
+                            <img src="https://newassets.apollo247.com/cms/2021-05/anemia.png">
+                            <p>Anemia</p>
+                        </div>
+                        <div style="border-right: 1px solid lightgrey;">
+                            <img src="https://newassets.apollo247.com/cms/2021-05/pregnancy.png">
+                            <p>Pregnency</p>
+                        </div>
+                        <div style="border-right: 1px solid lightgrey;">
+                            <img src="https://newassets.apollo247.com/cms/2021-05/anemia.png">
+                            <p>Iron Studies</p>
+                        </div>
+                        <div>
+                            <img src="https://newassets.apollo247.com/cms/2021-05/vitamin%20deficiency.png">
+                            <p>Vitamin Defic...</p>
+                        </div>
+                    </div>
+                    <div class="carline2">
+                        <img src="https://newassets.apollo247.com/cms/2021-10/Women%20wellness%20(1).jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="multiple">
+            <div class="poptype">
+                <div style="font-weight: bolder; color: #225e6f;">WOMEN WELNESS (18)</div>
+                <div style="font-size: 14px; color: #fcaf7a; font-weight: bolder;">VIEW ALL</div>
+            </div>
+            <div class="mboxes">
+                <div>
+                    <img src="https://newassets.apollo247.com/organs/ic_blood.png">
+                    <p class="h11">Compherensive</p>
+                    <p class="h11">Package - Women</p>
+                    <p class="h22">65 Parameters incuded</p>
+                    <hr> 
+                    <div class="popimage">
+                        <img src="https://newassets.apollo247.com/images/circle_logo.png" style="margin-left: 12px;">
+                        <p class="h3">Price ₹ 1999</p>
+                    </div>
+                    <div style="display: flex;">
+                        <p class="h3" style="text-decoration: line-through;">MRP ₹ 6630</p>
+                        <p class="h3" style="margin-left: 10px; font-weight: bold; color: #3faf5e;">65% off</p>
+                     </div>
+                     <div style="display: flex; justify-content: space-between;">
+                        <div style="display: flex;">
+                            <p class="h1" style="margin: 0px; margin-left: 12px; margin-bottom: 12px;">₹ 2352</p>
+                            <p class="h3" style="margin-top: 4px; margin-left: 5px ;">savings</p>
+                            <p class="h2" style="margin-top: 5px; margin-left: 5px;">₹4278</p>
+                        </div>
+                    </div>
+                    <div onclick="m31()" class="h1" style="color: #fdb454; margin-right: 12px;">ADD TO CART</div>
+                </div>
+                <div>
+                    <img src="https://newassets.apollo247.com/organs/ic_blood.png">
+                    <p class="h11">Compherensive</p>
+                    <p class="h11">Package - Senio...</p>
+                    <p class="h22">67 Parameters incuded</p>
+                    <hr> 
+                    <div class="popimage">
+                        <img src="https://newassets.apollo247.com/images/circle_logo.png" style="margin-left: 12px;">
+                        <p class="h3">Price ₹ 3999</p>
+                    </div>
+                    <div style="display: flex;">
+                        <p class="h3" style="text-decoration: line-through;">MRP ₹ 9030</p>
+                        <p class="h3" style="margin-left: 10px; font-weight: bold; color: #3faf5e;">48% off</p>
+                     </div>
+                     <div style="display: flex; justify-content: space-between;">
+                        <div style="display: flex;">
+                            <p class="h1" style="margin: 0px; margin-left: 12px; margin-bottom: 12px;">₹ 4705</p>
+                            <p class="h3" style="margin-top: 4px; margin-left: 5px ;">savings</p>
+                            <p class="h2" style="margin-top: 5px; margin-left: 5px;">₹4325</p>
+                        </div>
+                    </div>
+                    <div onclick="m32()" class="h1" style="color: #fdb454; margin-right: 12px;">ADD TO CART</div>
+                </div>
+                <div>
+                    <img src="https://newassets.apollo247.com/organs/ic_blood.png">
+                    <p class="h11">Women Welness</p>
+                    <p class="h11">Advance</p>
+                    <p class="h22">36 Parameters incuded</p>
+                    <hr> 
+                    <div class="popimage">
+                        <img src="https://newassets.apollo247.com/images/circle_logo.png" style="margin-left: 12px;">
+                        <p class="h3">Price ₹ 3048</p>
+                    </div>
+                    <div style="display: flex;">
+                        <p class="h3" style="text-decoration: line-through;">MRP ₹ 5115</p>
+                        <p class="h3" style="margin-left: 10px; font-weight: bold; color: #3faf5e;">30% off</p>
+                     </div>
+                     <div style="display: flex; justify-content: space-between;">
+                        <div style="display: flex;">
+                            <p class="h1" style="margin: 0px; margin-left: 12px; margin-bottom: 12px;">₹ 3587</p>
+                            <p class="h3" style="margin-top: 4px; margin-left: 5px ;">savings</p>
+                            <p class="h2" style="margin-top: 5px; margin-left: 5px;">₹1528</p>
+                        </div>
+                    </div>
+                    <div onclick="m33()" class="h1" style="color: #fdb454; margin-right: 12px;">ADD TO CART</div>
+                </div>
+                <div>
+                    <img src="https://newassets.apollo247.com/organs/ic_blood.png">
+                    <p class="h11">Women Welness</p>
+                    <p class="h11">Basic</p>
+                    <p class="h22">33 Parameters incuded</p>
+                    <hr> 
+                    <div class="popimage">
+                        <img src="https://newassets.apollo247.com/images/circle_logo.png" style="margin-left: 12px;">
+                        <p class="h3">Price ₹ 2098</p>
+                    </div>
+                    <div style="display: flex;">
+                        <p class="h3" style="text-decoration: line-through;">MRP ₹ 3465</p>
+                        <p class="h3" style="margin-left: 10px; font-weight: bold; color: #3faf5e;">29% off</p>
+                     </div>
+                     <div style="display: flex; justify-content: space-between;">
+                        <div style="display: flex;">
+                            <p class="h1" style="margin: 0px; margin-left: 12px; margin-bottom: 12px;">₹ 2469</p>
+                            <p class="h3" style="margin-top: 4px; margin-left: 5px ;">savings</p>
+                            <p class="h2" style="margin-top: 5px; margin-left: 5px;">₹996</p>
+                        </div>
+                    </div>
+                    <div onclick="m34()" class="h1" style="color: #fdb454; margin-right: 12px;">ADD TO CART</div>
+                </div>
+                <div>
+                    <img src="https://newassets.apollo247.com/organs/ic_thyroid.png">
+                    <p class="h11">Thyroid Profile -</p>
+                    <p class="h11">Free (FT3, FT4, ...</p>
+                    <p class="h22">4 Parameters incuded</p>
+                    <hr>
+                    <div class="mbottom">
+                        <img src="https://newassets.apollo247.com/images/circle_logo.png" style="margin-left: 6px;">
+                        <p class="h33">Price ₹ 748</p>
+                    </div>
+                    <div class="h11" style="margin-top: 20px; font-weight: bold;">₹ 880</div>
+                    <div onclick="m35()" class="h44">ADD TO CART</div>
+                </div>  
+                <div>
+                    <img src="https://newassets.apollo247.com/organs/ic_blood.png">
+                    <p class="h11">Hemoglobin</p>
+                    <p class="h11" style="color: white;">Hemoglobin</p>
+                    <p class="h22">1 Parameter incuded</p>
+                    <hr>
+                    <div class="mbottom">
+                        <img src="https://newassets.apollo247.com/images/circle_logo.png" style="margin-left: 6px;">
+                        <p class="h33">Price ₹ 187</p>
+                    </div>
+                    <div class="h11" style="margin-top: 20px; font-weight: bold;">₹ 220</div>
+                    <div onclick="m36()" class="h44">ADD TO CART</div>
+                </div>     
+            </div>
+        </div>
+        <div class="bottomtext1">
+            <P class="bt1" style="margin-bottom: 15px;">One-Stop Solution to Your Diagnostic Needs!</P>
+            <P>Apollo Diagnostics is one of the most trusted, one-stop solutions for all complex pathology tests. We believe that the accurate diagnosis of a health issue is vital for</P>
+            <p>further treatment, and the results of lab tests are the backbone for an effective treatment plan. You should keep track of your health by booking a test online and</p>
+            <p>getting yourself treated timely.</p>
+            <P class="bt1" style="margin-bottom: 15px; margin-top: 20px;">Why Choose Apollo Diagnostics? </P>
+            <p>We have been in the industry for 36 years now, delivering 3.5 million tests every year. With more than 100+ laboratories and 700+ collection centres, we have earned</p>
+            <p>a reputation for India’s leading multinational chain of diagnostic centres. We aim to bring quality and affordable diagnostic solutions closer to people. From 150+</p>
+            <p>collection centres in 2015 to 700+ collection centres now, we have seen growth! </p>
+            <p style="margin-top: 20px; margin-bottom: 15px;">The benefits of choosing Apollo diagnostic:</p>
+            <ul >
+                <li>An effective network of collection centres and laboratories.</li>
+                <li>Top-notch quality accurate tests at affordable prices.</li>
+                <li>Priority access and best deals with Apollo Circle membership on lab tests.</li>
+                <li>An exquisite value system.</li>
+                <li>High-quality diagnostic services.</li>
+                <li>Rigid external & internal quality examination.</li>
+                <li>Continuous upgrade & addition of the latest technologies.</li>
+                <li>Easy and convenient online lab test booking.</li>
+                <li>Wide range of medical specialties and lab tests.</li>
+            </ul>
+            <p class="bt1" style="margin-bottom: 15px; margin-top: 20px;">Book a Pathology Lab Test with Apollo 24|7</p>
+            <p>We are here for you! Ensure good health and know the defense against health issues. We own a wide range of leading pathology labs. Book a Pathology Lab Test</p>
+            <p>near you with ease to get the test reports online. We have more than 100+ laboratories with top-notch quality equipment and provide multiple lab services to all age</p>
+            <p>groups.</p>
+            <p style="margin-top: 20px; margin-bottom: 15px;">Steps to book a lab test from the comfort of your home:</p>
+            <ul>
+                <li>Book online - Select the package or test you want to book.</li>
+                <li>Choose home sample collection option - A qualified phlebotomist visits your home for sample collection at the selected slot time.</li>
+                <li>Get your blood test reports within 48 hours - download them from the app or website anytime, anywhere!</li>
+            </ul>
+            <p class="bt1" style="margin-bottom: 15px; margin-top: 20px;">Find Pathology Labs Nearby at Apollo 24|7</p>
+            <p>Keep control of your health with timely medical check-ups from Apollo Diagnostics. We offer a wide range of laboratory services that deliver accurate diagnostic lab</p>
+            <p>test results. Browse the most trusted pathology labs here on Apollo 24|7. </p>
+            <p class="bt1" style="margin-bottom: 15px; margin-top: 20px;">Book Lab Test with Home-Collection Facility</p>
+            <p>Regular health check-ups are vital for a healthy life. Daily health check-ups help in detecting diseases at the earliest following a timely treatment. Diagnostic tests are</p>
+            <p>crucial for regular health check-ups. Due to a busy schedule, it is possible to forget daily health checks. Apollo 24|7 provides blood sample testing at your doorstep</p>
+            <p>conveniently. We offer home collections for blood tests by qualified and trained phlebotomists. The blood sample collection process from home is convenient and</p>
+            <p>saves a lot of time. Book lab tests at home and utilise the home collection facility with Apollo Diagnostics.</p>
+            <p class="bt1" style="margin-bottom: 15px; margin-top: 20px;">Fast and Accurate Test Reports</p>
+            <p>We strive to offer the best test reports service possible. Even on hectic working days, we never fail to meet the fast test reports timelines. At Apollo Diagnostics, the</p>
+            <p>blood test reports will be made available to you without any delays. You can easily download them from the Apollo 24|7 app or website, anytime and anywhere. We</p>
+            <p>use the latest technologies to attain fast and accurate test reports.</p>
+            <p class="bt1" style="margin-bottom: 15px; margin-top: 20px;">A Broad Range of Lab Tests Under One Roof!</p>
+            <p>We believe in timely, quality, and patient-friendly services. Routine tests and health check-ups are vital, so we make sure that we can meet your requirements. We</p>
+            <p>offer a wide range of lab tests | RT-PCR Test | Renal Profile Test (KFT, RFT) | Hemogram Test | Lipid Profile Test | Thyroid Profile Test (T3 T4 TSH) | D-Dimer</p>
+            <p>Test | Urine Culture Test | Complete Blood Count Test (CBC Test) | Widal Test | Liver Function Test (LFT) and more. Our main goal is to focus on the quality care</p>
+            <p>of patients. We believe, for good treatment and care, high-quality diagnostics are vital. At Apollo Diagnostics, all lab tests facilities are made available.</p>
+        </div>
+        <div class="finaldiv">
+        <div class="bottomtext2">
+            <img src="https://newassets.apollo247.com/images/ic_logo.png">
+            <p class="bt11" style="margin-bottom: 15px; margin-top: 5px;">About Appolo 247</p>
+            <div style="display: flex; flex-wrap: wrap;">
+                <li>About Us</li>
+                <li>Contact Us / Grievance</li>
+                <li>FAQs</li>
+                <li>Health Queries</li>
+                <li>Terms and Conditions</li>
+                <li>Returns Policy</li>
+                <li>Refund Policy</li>
+                <li>Privacy Policy</li>
+                <li>Apollo 247 Android App</li>
+                <li>Apollo 247 iOS App</li>
+                <li>Apollo 247 Sitemap</li>
+                <li>Online Doctor App</li>
+                <li>Online Medicine App</li>
+                <li>Apollo Pharmacy</li>
+            </div>
+            <p class="bt11" style="margin-bottom: 15px; margin-top: 20px;">Services</p>
+            <div style="display: flex; flex-wrap: wrap;">
+                <li>Online Doctor Consultation</li>
+                <li>Apollo Circle Membership</li>
+                <li>Online Medicines</li>
+                <li>Project Kavach</li>
+                <li>Cough Scanner</li>
+                <li>Covid Vaccine Tracker</li>
+                <li>Covid Vaccine Update</li>
+                <li>Apollo Pro Health Program</li>
+                <li>Doctors by Specialty</li>
+                <li>Doctors by City</li>
+                <li>All Doctors List</li>
+            </div>
+            <p class="bt11" style="margin-bottom: 15px; margin-top: 20px;">Top Specialties</p>
+            <div style="display: flex; flex-wrap: wrap;">
+                <li>Covid Consultation</li>
+                <li>Consult Physicians</li>
+                <li>Consult Dermatologists</li>
+                <li>Consult Paediatricians</li>
+                <li>Consult Gynaecologists</li>
+                <li>Consult Gastroenterologists</li>
+                <li>Consult Cardiologists</li>
+                <li>Consult Dietitians</li>
+                <li>Consult ENT Specialists</li>
+                <li>Consult Geriatricians</li>
+                <li>Consult Diabetologists</li>
+            </div>
+            <p class="bt11" style="margin-bottom: 15px; margin-top: 20px;">Book Lab Tests at Home</p>
+            <div style="display: flex; flex-wrap: wrap;">
+                <li>RT PCR Test At Home</li>
+                <li>Book Lab Tests at Home</li>
+                <li>Renal Profile (KFT, RFT Test)</li>
+                <li>Hemogram Test</li>
+                <li>Lipid Profile Test</li>
+                <li>Thyroid Profile Test (T3 T4 Tsh Test)</li>
+                <li>D Dimer Test</li>
+                <li>Urine Culture Test</li>
+                <li>Complete Blood Count (CBC Test)</li>
+                <li>Widal Test</li>
+                <li>Liver Function Test (LFT Test)</li>
+            </div> 
+            <p class="bt11" style="margin-bottom: 15px; margin-top: 20px;">Product Categories</p>  
+            <div style="display: flex; flex-wrap: wrap;">
+                 <li>View All Brands</li>
+                 <li>Health Care</li>
+                 <li>Personal Care</li>
+                 <li>Baby Care</li>
+                 <li>Nutrition</li>
+                 <li>Healthcare Devices</li>
+                 <li>Beauty Skin Care</li>
+                 <li>Immunity Boosters</li>
+                 <li>Coronavirus Prevention</li>
+                 <li>Diabetes Care</li>
+                 <li>Patanjali Coronil Kit</li>
+                 <li>Mamaearth Products</li>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html> 

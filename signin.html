@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #head{
+            height:120px;
+            width: 69.3%;
+            position: fixed;
+            top: 0;
+            /* flex-wrap: wrap; */
+            display: flex;
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;   
+            margin-left: 15%;
+        }
+        #head > .headL{
+            width:30%;
+            display: flex;
+            /* flex-wrap: wrap; */
+        }
+        .headL > img{
+            width: 90px;
+            height: 90px;
+            margin: 10px;
+        }
+         .headR{
+            width:70%;
+            display: flex;
+            margin-left:33%;
+
+           
+            /* height:100% */
+        }
+        .headR > div{
+            margin: 10px;
+            width: 15%;
+            height: 80%;
+            flex-wrap: wrap;
+        }
+        .navIMG{
+            width: 100px;
+            border: none;
+        }
+        .navIMG:hover{
+            border-bottom:2px solid teal;
+        }
+        .navL{
+            border:none;
+           
+        }
+        .navL:hover{
+            border-bottom:2px solid teal;
+        }
+        .navL > h5{
+            color:rgb(2,71,91);
+            border-bottom: 1px solid;
+         
+        }
+        .navL > p{
+            color:rgb(121, 160, 173);
+            font-size: 13px;
+            margin-top: -16px;
+        }
+        .navlogo{
+            width: 60%;
+           
+            margin-top: 15px;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="head" >
+        <div class="headL">
+            <img src="https://newassets.apollo247.com/images/ic_logo.png"/>
+        </div>
+        <div  class="headR" >
+            <button onclick="window.location.href='doctors.html'" class="navL">
+                <h5>DOCTORS</h5>
+                <p>Consult <br> Online</p>
+            </button>
+            <button onclick="window.location.href='pharmacy.html'" class="navL" style="width: 100px;">
+               <h5>PHARMACY</h5>
+               <p>Medicines & other product</p>
+            </button>
+            <button onclick="window.location.href='labtests.html'" class="navL">
+               <h5>LAB TEST</h5>
+               <p>Health<br>check-ups</p>
+            </button>
+            <button class="navL">
+                <h5>CIRCLE</h5>
+               <p>Free Delivery & Cashback</p>
+            </button>
+            <button onclick="window.location.href='cart.html'" class="navIMG">
+                <img class="navlogo" src="https://thumbs.dreamstime.com/b/high-quality-dark-blue-shopping-cart-icon-high-quality-dark-blue-shopping-cart-icon-pictogram-icon-set-illustration-useful-web-192534364.jpg"/>
+            </button>
+            <button onclick="window.location.href='signup.html'" class="navIMG">
+               
+            </button>
+        </div>
+    </div>
+    <div style="margin-top: 15%;margin-left: 45%;">
+        <h1 style="color: teal;margin-left: 45px;">login Page</h1>
+        <div style="margin-bottom: 10px ;font-size: 18px;font-weight: bold;">Enter email</div>
+        <div style="margin-bottom: 10px ; "><input style="height: 30px;width: 30%;" class="email" type="email" placeholder="enter email"></div>
+        <div style="margin-bottom: 10px ;font-size: 18px;font-weight: bold;">Password</div>
+        <div style="margin-bottom: 10px ;"><input style="height: 30px;width: 30%;" class= "password" type="text" placeholder="enter password"></div>
+        <button style="margin-bottom: 10px ;margin-left: 10%;padding: 10px;background-color:hsl(42,93%,52%); border: none ; " onclick="submit()">Submit</button>
+    </div>
+</body>
+</html>
+<script>
+    var arr = JSON.parse(localStorage.getItem("userDataBase"))
+
+    function submit()
+    {
+        var email = document.querySelector(".email").value
+
+        var password = document.querySelector(".password").value
+
+        var count=0
+        for(var i =0 ; i< arr.length ; i++)
+        {
+            if(email == arr[i].emailid && password == arr[i].pass)
+            {
+                alert("Login Successful")
+                count++
+            }  
+        }
+        if(count==0)
+        {
+            alert("Wrong Crediantials")
+        }
+        else
+        {
+             window.location.href="home.html"
+        }
+  
+    }
+
+    
+</script>

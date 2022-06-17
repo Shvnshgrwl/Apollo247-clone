@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup page</title>
+    <style>
+        #email{
+            width: 200px;
+            height: 20px;
+            margin-left: 400px;
+        }
+        #mblno{
+            width: 200px;
+            height: 20px;
+            margin-left: 400px;
+        }
+        #fname{
+            width: 200px;
+            height: 20px;
+            margin-left: 10px;
+        }
+        #lname{
+            width: 200px;
+            height: 20px;
+            margin-left: 10px;
+        }
+        #pass{
+            width: 200px;
+            height: 20px;
+            margin-left: 10px;
+        }
+        #btn{
+            margin-left: 400px;
+            background-color: #c2fbd7;
+            border-radius: 100px;
+            box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+            color: green;
+            cursor: pointer;
+            display: inline-block;
+            font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+            padding: 7px 20px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 250ms;
+            border: 0;
+            font-size: 16px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+        #btn:hover {
+            box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+            transform: scale(1.05) rotate(-1deg);
+        }         
+        img{
+            border-radius: 50%;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+        input{
+            border: 1px solid teal;
+            border-radius: 5px;
+            color: rgb(2,71,91);
+            font-weight: bold;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        }
+        p{
+            font-size: 100px;
+            margin-left: 500px;
+            
+            color: rgb(2,71,91);
+        }
+    </style>
+  </head>
+  <body>
+    <p>SignUp!</p>
+    <div id="container">
+    
+    <form>
+      <input id="email" type="text" placeholder="Enter email address" />
+      <input id="fname" type="text" placeholder="Enter first name" />
+      <input id="lname" type="text" placeholder="Enter last name" />
+      <br>
+      <br>
+      <input id="mblno" type="number" placeholder="Enter mobile number" />
+      <input id="pass" type="password" placeholder="Enter password" />
+      <br>
+      <br>
+      <input  id="btn" type="submit" value="Sign Up" />
+    </form>
+    </div>
+  </body>
+</html>
+
+<script>
+  document.querySelector("form").addEventListener("submit", sign);
+  var userStack = JSON.parse(localStorage.getItem("userDataBase")) || [];
+  function sign(event) {
+    event.preventDefault();
+    var email = document.querySelector("#email").value;
+    var fname = document.querySelector("#fname").value;
+    var lname = document.querySelector("#lname").value;
+    var mblno = document.querySelector("#mblno").value;
+    var pass = document.querySelector("#pass").value;
+    
+
+    var Data = {
+      emailid: email,
+      firstName: fname,
+      lastName: lname,
+      mblno: mblno,
+      pass: pass,
+    };
+
+    userStack.push(Data);
+
+    localStorage.setItem("userDataBase", JSON.stringify(userStack));
+    alert("Congratulations your account is created");
+    window.location.href = "signin.html";
+  }
+</script>

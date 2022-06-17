@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width: 80%;
+            height: 4500px;
+            background-color: white;
+            margin: auto;
+            flex-wrap: wrap;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            
+        }
+        #container > #head{
+            height:120px;
+            width: 60%;
+            position: fixed;
+            top: 0;
+            /* flex-wrap: wrap; */
+            display: flex;
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            
+        }
+        #container > #dummy{
+            height:140px;
+            width:100%;
+            
+        }
+       
+        #head{
+         height:120px;
+          width: 79%;
+           position: fixed;
+           top: 0;
+    /* flex-wrap: wrap; */
+          margin-left:9.8%;
+          display: flex;
+         background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+         }
+        #head > .headL{
+        width:30%;
+       display: flex;
+    /* flex-wrap: wrap; */
+         }
+        .headL > img{
+         width: 90px;
+          height: 90px;
+         margin: 10px;
+         }
+         #head > .headR{
+          width:55%;
+          display: flex;
+          margin-left: 50px;
+   
+         height:100%
+         }
+        .headR > div{
+           margin: 10px;
+          width: 15%;
+          height: 80%;
+         flex-wrap: wrap;
+         }
+         .navL{
+         border:none;
+ 
+         }
+        .navL:hover{
+
+         border-bottom:4px solid teal;
+         }
+        .navL > h5{
+       color:rgb(2,71,91);
+       border-bottom: 1px solid;
+  
+         }
+        .navL > p{
+       color:rgb(121, 160, 173);
+      font-size: 12px;
+      margin-top: -16px;
+        }
+     .navImg{
+ 
+      margin-bottom: none;
+       }
+     .navlogo{
+     width: 60%;
+    /* height:60%; */
+     margin-top: 15px;
+     margin-left: 20px;
+      }
+     .navImg:hover{
+     border-bottom:4px solid teal;
+     }
+        /* test */
+        .container{
+            width: 100%;
+            background-color: white;
+            margin-top: -10px;
+        }
+        #box1{
+            height: 385px;
+            display: flex;
+        }
+        #box1 > .box1L{
+            width: 60%;
+        }
+        #box1 > .box1R{
+            width: 60%;
+        }
+        .box1L > div{
+            margin: 5px;
+        }
+        #container > #box3{
+            width: 100%;
+            height: 250px;
+            background-color: rgb(247,248,245);
+        }
+       
+        .flex > .arrowL{
+            margin-top: 70px;
+        }
+        .flex > .ad{
+           width: 100%;
+           height: 60%;
+          
+        }
+        .dot{
+            flex-wrap: wrap;
+            height: 30px;
+            margin-top: 20px;
+        }
+        .dot> div{
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            background-color: grey;
+            display: inline-block;
+            margin: 2px;
+        }
+        #box4{
+            height: 180px;
+            width: 100%;
+            margin: auto;
+            flex-wrap: wrap;
+            background-color: rgb(247,248,245);
+        }
+        #box4 > .customer{
+            width: 87%;
+            height: 80%;
+            margin: auto;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        .customer > .query{
+            flex-wrap: wrap;
+            width: 21%;
+            height: 30%;
+            display: inline-block;
+            margin-left: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        .query > h3{
+            color: rgb(252,170,109);
+            font-size: 15px;
+            text-align: center;
+        }
+        #box5{
+            height: 240px;
+            width: 100%;
+            margin: auto;
+            flex-wrap: wrap;
+            background-color: rgb(247,248,245);
+        }
+        .advertise{
+            margin: auto;
+            width:88%;
+            height: 170px;
+        }
+        .advertise > img{
+            max-width: 100%;
+            max-height: 100%;
+        }
+        #box6{
+            height: 340px;
+            width: 100%;
+            margin: auto;
+            flex-wrap: wrap;
+            background-color: rgb(247,248,245);
+        }
+        .article{
+            height: 90%;
+            width: 88%;
+            margin: auto;
+            border-radius: 10px;
+        }
+        .article > div{
+            height:33%;
+            width:100%;
+            border-radius: 10px;
+        }
+        .article1{
+            background-image: url('https://newassets.apollo247.com/images/ecosystem-banner.jpg');
+        }
+        .article1 > h3{
+            color: white;
+            margin: 20px;
+            font-size: 28px;
+        }
+        .article1 > p{
+            color: white;
+            margin: 20px;
+            font-size: 18px;
+        }
+        .article2{
+            background-color: white;
+            flex-wrap: wrap;
+        }
+        .article2 > .art2{
+            display: inline-block;
+            margin-top: 20px;
+            margin-left: 20px;
+            flex-wrap: wrap;
+            background-color: white;
+        }
+        .art3{
+            border: 1px solid rgb(2,71,91);
+            display: inline-block;
+            height: 38px;
+            width: 27%;
+            margin-top:-10px;
+            margin-left: 20px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        #box7{
+            height: 2050px;
+            width: 100%;
+            margin: auto;
+            flex-wrap: wrap;
+        }
+        #content{
+            width: 95%;
+            margin: auto;
+            flex-wrap: wrap;
+        }
+        .heading{
+            color:rgb(2,71,91);
+            font-size:15px;
+            font-weight: bold;
+        }
+        .para{
+            color:rgb(2,71,91);
+            font-size:15px;
+        }
+        .paraMargin{
+            margin-top: -10px;
+        }
+        #box8{
+            height: 900px;
+            width: 100%;
+            margin: auto;
+            flex-wrap: wrap;
+            background-color: black;
+        }
+        .contentBlack{
+            width: 100%;
+            margin: auto;
+            flex-wrap: wrap;
+        }
+        .contentBlack > img{
+            height: 55%;
+            width: 12%;
+            margin-left: 430px;
+            margin-top: 20px;
+        }
+        .yellow{
+            color:rgb(247,181,21);
+            font-size:15px;
+        }
+        .contentBlack > .yellowDiv{
+            width: 100%;
+            height: 35px;
+        }
+        .yellowDiv > div{
+            display: inline-block;
+        }
+        .white{
+            color: white;
+            font-size:15px;
+            margin-left: 20px;    
+        }
+
+        .bottomtext1
+{
+    width: 96%;
+    border: 1px solid white;
+    margin-left: 22px;
+    margin-top: 85px;
+}
+.bottomtext1 p
+{
+   margin: 0px;
+   padding: 0px;
+   color: #12495b;
+}
+.bt1
+{
+    font-weight: bold;
+}
+.bottomtext2
+{
+    width: 96%;
+    /* border: 1px solid black; */
+    
+    margin-left: 22px;
+   background-color: rgb(2,13,17)
+}
+.bottomtext2 img
+{
+    width: 100px;
+    margin-left: 400px;
+    margin-top: 30px;
+}
+.bottomtext2 p
+{
+   margin: auto;
+   padding: 10px;
+}
+.bt11
+{
+    font-weight: bold;
+    color: #f9b415;
+}
+.bottomtext2 li
+{
+   margin-right: 30px;
+   margin-left: 10px;
+   margin-bottom:10px;
+   color: white;
+}
+
+    </style>
+</head>
+<body>
+    
+        <!-- head nav for all pages -->
+        <div id="head" >
+            <div class="headL">
+                <img src="https://newassets.apollo247.com/images/ic_logo.png"/>
+            </div>
+            <div  class="headR" style="margin-left:15%">
+                <div onclick="window.location.href='doctors.html'" class="navL">
+                    <h5>DOCTORS</h5>
+                    <p>Consult <br> Online</p>
+                </div>
+                <div  onclick="window.location.href='pharmacy.html'" class="navL">
+                   <h5>PHARMACY</h5>
+                   <p>Medicines & other product</p>
+                </div>
+                <div  onclick="window.location.href='labtests.html'" class="navL">
+                   <h5>LAB TEST</h5>
+                   <p>Health<br>check-ups</p>
+                </div>
+                <div onclick="window.location.href='covid.html'" class="navL">
+                    <h5>CIRCLE</h5>
+                    <p>Free Delivery & Cashback</p>
+                </div>
+                <div  class="navImg"onclick="window.location.href='cart.html'">
+                    <img  class="navlogo" src="https://thumbs.dreamstime.com/b/high-quality-dark-blue-shopping-cart-icon-high-quality-dark-blue-shopping-cart-icon-pictogram-icon-set-illustration-useful-web-192534364.jpg"/>
+                </div>
+                <div class="navImg" onclick="window.location.href='signup.html'">
+                    <img class="navlogo" src="data:image/png;base64,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"/>
+                </div>
+            </div>
+        </div>
+        <!-- dummy for filling the head background block -->
+    <div id="container">    
+        <div id="dummy"></div>
+        <!-- 2nd box -->
+        <div class="container">
+            <div id="box1">
+                <div class="box1L">
+                    <div style="font-size:20px;"><h1 style="color:rgb(#3e6f88);margin-left: 33px;">Hello There!</h1></div>
+                    <div><h3 style="color: #0087ba;margin-left: 33px;">Always caring about your health, we are here <br> to help you!</h3></div>
+                    <div onclick="window.location.href='doctors.html'" style="display: flex; width: 80%;margin:5px 40px;border-radius: 10px;background-color:#4f909d;">
+                        <div style="margin: auto;"><img src="https://newassets.apollo247.com/images/ic-doctor.svg"/></div>
+                        <div style="margin: auto;color: white;"><p>Book Appointment with Apollo Doctors</p></div>
+                        <div style="margin: auto;"><img src="https://newassets.apollo247.com/images/ic_arrow_right_white.svg"/></div>
+                    </div>
+                    <div onclick="window.location.href='pharmacy.html'" style="display: flex; width: 80%;margin:5px 40px; border-radius: 10px;background-color:#4f909d">
+                       <div style="margin: auto;"><img style="max-width:50px;" src="https://newassets.apollo247.com/images/ic_medicines.png"/></div>
+                       <div style="margin: auto;color: white;"><p>Buy Medicines and Essentials</p></div>
+                       <div style="margin: auto;"><img src="https://newassets.apollo247.com/images/ic_arrow_right_white.svg"/></div>
+                    </div>
+                    <div onclick="window.location.href='labtests.html'"  style="height: 45px;display: flex;flex-wrap: wrap;">
+                       <div style="width: 40%;height: 45px;margin-left: 40px;flex-wrap: wrap;box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; ;border-radius: 10px ;background-color: white;display: flex;">
+                           <div><img src="https://newassets.apollo247.com/images/ic_home_test.svg"/></div>
+                           <div><p style="color:rgb(2,71,91) ;margin-left: 10px;">Book Lab Tests</p></div>
+                       </div>
+                       <div style="width: 40%;margin-left:10px;height: 45px;flex-wrap: wrap; margin-left: 5px;box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;;border-radius: 10px ;background-color: white;display: flex;">
+                           <div><img src="https://newassets.apollo247.com/images/ic-prescription.svg"/></div>
+                           <div><p style="color: rgb(2,71,91); margin-left: 40px;margin-top: -2.5em">View Health Records</p></div>
+                       </div>
+                   </div>
+                </div>
+                <div class="box1R" style="background-image: url('https://newassets.apollo247.com/images/img-doctors@1x.jpg');"></div>
+            </div>
+        </div>
+        <!-- 3rd box -->
+        <div id="box3">
+            
+            <div class="flex" style="margin-top: 20px">
+                <img class="ad" src="https://newassets.apollo247.com/images/banners/HH_08June.jpg"/>
+            </div>
+            
+            <div class="dot">
+                <div style="margin-left: 80px;"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div style="background-color: rgb(2,71,91); width:15px; border-radius: 10px;"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <!-- 4th box -->
+        <div id="box4">
+            <div class="customer">
+                <div style="color: rgb(24,180,159);font-size: 15px;margin-left: 20px;margin-top: -18px;" ><h3>For COVID-19 Vaccination related queries</h3></div>
+                <div class="query"><h3>FAQs & Articles</h3></div>
+                <div class="query"><h3>Vaccination Queries</h3></div>
+                <div class="query"><h3>Chat with us</h3></div>
+                <div class="query"><h3>Cowin Registration</h3></div>
+            </div>
+        </div>
+        <!-- 5th box -->
+        <div id="box5">
+            <div class="advertise"><img src="https://newassets.apollo247.com/images/prohealth/prohealthSliderTwo.jpg"/></div>
+        </div>
+        <!-- 6th box -->
+        <div id="box6" style="margin-top: -20px;">
+            <div class="article">
+                <div class="article1">
+                    <h3>HEALTH ARTICLE & RESOURCES</h3>
+                    <p>Make better health choices with our curated blogs, videos and expert advice</p>
+                </div>
+                <div class="article2" style="border-radius: 0%;">
+                    <div class="art2" style="height: 50%; width: 60%;">
+                         <h4 style="margin-top:-1px ; color:rgb(24,180,159) ;">HEALTH BLOG</h4>
+                         <p style="margin-top:-7px; color: rgb(161, 157, 157);">Explore healthcare content created every day by our experts.</p>
+                    </div>
+                    <div class="art2" style="height: 40%; width: 20%;margin-left: 120px; border-radius: 10px;box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                          <p style="text-align: center;color:rgb(252,170,109);;block-size: auto;">Read the Latest Articles</p>
+                    </div>
+                    <p style="margin-top: -2px;text-align: center; color: rgb(161, 157, 157);">-----------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+                </div>
+                <div style="background-color: white;margin-top: -20px;">
+                    <p style="color:rgb(2,71,91);margin:20px;font-size:13px;">YOU CAN ALSO</p>
+                    <div class="art3"><p style="color:rgb(2,71,91);text-align:center;font-size:15px;font-weight: bold;">Take a Mental health Scan</p></div>
+                    <div class="art3"><p style="color:rgb(2,71,91);text-align:center;font-size:15px;font-weight: bold;">Explore HealthyLife</p></div>
+                    <div class="art3"><p style="color:rgb(2,71,91);text-align:center;font-size:15px;font-weight: bold;">Explore Apollo Kavach Program</p></div>
+                </div>
+            </div>
+        </div>
+        <!-- 7th box -->
+        <div id="box7">
+            <div id="content" style="height: 140px;">
+                <h3 class="heading">Apollo 24|7 - Your Most Trusted Healthcare Brand</h3>
+                <p class="para">Apollo 24|7 is the largest multi-channel digital healthcare platform in India, created with a vision of eliminating flexibility blockages from the healthcare industry. We believe in making healthcare affordable to everyone by combining analytic excellence, affordable cost, and extensive research with advanced technology. Apollo 24|7 is a single online platform where you have access to a wide range of services such as online pharmacy, online doctor consultations, and diagnostic lab tests at home. We also provide expert solutions for chronic conditions and COVID-care with a secured digital vault, where you can safely upload all your medical reports. </p>
+            </div>
+            <div id="content" style="height: 330px;">
+                <h3 class="heading">The Smart Choice for Your Health is Here</h3>
+                <p class="para">Make the best decision for your health by choosing Apollo 24|7. Here’s why you can count on us:</p>
+                <table>
+                        <ul>
+                            <li style="color:rgb(2,71,91);"><p class="para paraMargin">36 years of legacy in the healthcare industry</p></li>
+                            <li style="color:rgb(2,71,91);"><p class="para paraMargin">24x7 availability of doctors</p></li>
+                            <li style="color:rgb(2,71,91);"><p class="para paraMargin">More than 3.5 million diagnostic tests each year</p></li>
+                            <li style="color:rgb(2,71,91);"><p class="para paraMargin">700+ collection centres and 100+ laboratories</p></li>
+                            <li style="color:rgb(2,71,91);"><p class="para paraMargin">High quality and affordable diagnostic solutions </p></li>
+                            <li style="color:rgb(2,71,91);"><p class="para paraMargin">Fast and accurate test report results</p></li>
+                            <li style="color:rgb(2,71,91);"><p class="para paraMargin">Several medical specialties under one roof</p></li>
+                            <li style="color:rgb(2,71,91);"><p class="para paraMargin">Online prescriptions - available anytime, anywhere</p></li>
+                            <li style="color:rgb(2,71,91);"><p class="para paraMargin">Order medicines and book tests online with ease</p></li>
+                            <li style="color:rgb(2,71,91);"><p class="para paraMargin">Digitised health queries</p></li>
+                        </ul>
+                </table>
+            </div>
+            <div id="content" style="height: 180px;">
+                <h3 class="heading">Ask a Doctor Online 24/7</h3>
+                <p class="para">Online doctor consultations take place through online doctor chat, call, or video call. This helps you to talk to doctors online from the comfort of your home by simply choosing a doctor from different specialties. Avail personalised solutions for any health problem with prompt online doctor consultation with Apollo 24|7. Safe and secure platform</p>
+                <table>
+                    <ul>
+                        <li style="color:rgb(2,71,91);"><p class="para paraMargin">Safe and secure platform</p></li>
+                        <li style="color:rgb(2,71,91);"><p class="para paraMargin">Affordable rates</p></li>
+                        <li style="color:rgb(2,71,91);"><p class="para paraMargin">Video and chat options</p></li>
+                    </ul>
+                </table>
+            </div>
+            <div id="content" style="height: 280px;">
+                <h3 class="heading">Online Doctor Consultation - Now at Your Fingertips</h3>
+                <p class="para">The demand for doctors is expected to increase as new medicines allow people to live longer. However, there are several ways to reach out to a doctor without the need to visit a hospital or clinic, all thanks to technology. With the online facility available, doctor consultations have become easier, and you can get the right health care. Online doctor consultations with 4000+ top medical doctors are available at Apollo 24|7. Video call or chat with expert doctors from 100+ medical specialties, including | Dermatology | Gynaecology | Paediatrics | Psychiatry | General Physicians | Gastroenterology | Dietetics | Ent Specialists | and more, in just 15 minutes.</p>
+                <p class="para">Benefits of choosing online doctor consultations:</p>
+                <table>
+                    <ul>
+                        <li style="color:rgb(2,71,91);"><p class="para paraMargin">Save time, money, and effort.</p></li>
+                        <li style="color:rgb(2,71,91);"><p class="para paraMargin">No need to travel. </p></li>
+                        <li style="color:rgb(2,71,91);"><p class="para paraMargin">Most convenient option to choose from, and helps in early diagnosis.</p></li>
+                        <li style="color:rgb(2,71,91);"><p class="para paraMargin">Online doctor consultations are confidential and safe.</p></li>
+                        <li style="color:rgb(2,71,91);"><p class="para paraMargin">No risks of infections.</p></li>
+                    </ul>
+                </table>
+            </div>
+            <div id="content" style="height: 260px;">
+                <h3 class="heading">Pharmacy Simplified with Apollo 24|7</h3>
+                <p class="para">Apollo pharmacy is the most credible and established online pharmacy in India. It delivers 100% original medicines and products. Apollo pharmacy is believed to offer super-fast home delivery for all the healthcare essentials. Explore our broad range of medicines or over-the-counter medicines and products such as baby care, personal care, wellness, lifestyle, health, and nutrition categories online with ease. </p>
+                <p class="para">Rapid deliveries of medicines are available online at Apollo Pharmacy. In some cities, deliveries are done in less than 24 hours.</p>
+                <table>
+                    <ul>
+                        <li style="color:rgb(2,71,91);"><p class="para paraMargin">Get health credits on purchasing medicines and products.</p></li>
+                        <li style="color:rgb(2,71,91);"><p class="para paraMargin">Alluring deals on medicines and other products.</p></li>
+                        <li style="color:rgb(2,71,91);"><p class="para paraMargin">A broad range of medicines and essential healthcare products to choose from.</p></li>
+                        <li style="color:rgb(2,71,91);"><p class="para paraMargin">Prescriptions are uploaded directly.</p></li>
+                        <li style="color:rgb(2,71,91);"><p class="para paraMargin">Authentic and top-notch quality products.</p></li>
+                    </ul>
+                </table>
+            </div>
+            <div id="content" style="height: 260px;">
+                <h3 class="heading">Convenient Diagnostic Lab Tests at Home</h3>
+                <p class="para">Regular health check-ups are vital for a healthy life because it helps in detecting diseases at the earliest, following a timely treatment. Apollo 24|7 provides blood sample testing at your doorstep conveniently. You can book lab tests at home and utilise the home-collection facility. We offer a broad range of diagnostic lab tests such as | RT-PCR Test | Renal Profile Test (KFT, RFT) | Hemogram Test | Lipid Profile Test | Thyroid Profile Test (T3 T4 TSH) | D-Dimer Test | Urine Culture Test | Complete Blood Count Test (CBC Test) | Widal Test | Liver Function Test (LFT) | and more.</p>
+                <p class="para">Top-notch quality diagnostics are critical for the best treatment and personalised patient care.</p>
+                <p class="para">Here are some simple steps to book a lab test:</p>
+                <table>
+                    <ul>
+                        <li style="color:rgb(2,71,91);"><p class="para paraMargin">Book online - Select the package or test you want to book.</p></li>
+                        <li style="color:rgb(2,71,91);"><p class="para paraMargin">Choose home-sample collection option - A qualified phlebotomist visits your home for sample collection at the selected slot time.</p></li>
+                        <li style="color:rgb(2,71,91);"><p class="para paraMargin">Get fast and accurate blood test reports - download them from the app or website anytime, anywhere!</p></li>
+                    </ul>
+                </table>
+            </div>
+            <div id="content" style="height: 100px;">
+                <h3 class="heading">Find Pathology Labs with Ease at Apollo 24|7</h3>
+                <p class="para">Manage your health with prompt health check-ups from Apollo 24|7. We offer an extensive range of laboratory services that deliver factual diagnostic lab test results. You will find the most trusted pathology labs here at Apollo 24|7.</p>
+            </div>
+            <div id="content" style="height: 50px;">
+                <h3 class="heading">Other Services Offered by Apollo 24|7</h3>
+            </div>
+            <div id="content" style="height: 100px;">
+                <h3 class="heading">Apollo Circle Membership: Premium Healthcare Program</h3>
+                <p class="para">Apollo 24/7 Circle is an elite membership plan for those who put their overall health and well-being on priority. This membership plan guarantees priority access to Apollo’s best doctors, personalised care, unique deals, and comprehensive wellness programs especially curated by professionals. </p>
+            </div>
+            <div id="content" style="height: 200px;">
+                <h3 class="heading">Apollo Prohealth Program </h3>
+                <p class="para">Apollo ProHealth Program is an exclusive end-to-end personalised proactive healthcare management program that combines predictive risk assessments and top-notch quality diagnostics with accurate physician checks. Approximately 22 million health checks have been done based on this program. You can count on us for:</p>
+                <table>
+                    <ul>
+                        <li style="color:rgb(2,71,91);"><p class="para paraMargin">Customised health risk assessments: diagnostic tests designed exclusively for your profile to foresee the health risks.</p></li>
+                        <li style="color:rgb(2,71,91);"><p class="para paraMargin">Physician-led assessment: designed for customised treatment plans and overall wellness goals.</p></li>
+                        <li style="color:rgb(2,71,91);"><p class="para paraMargin">Multi-organ assessment: diagnostic tests designed as per your profile with consultations from top specialists and physicians.</p></li>
+                        <li style="color:rgb(2,71,91);"><p class="para paraMargin">Health instructors: to evaluate your health parameters regularly and help you stay on your path to health and wellness.</p></li>
+                    </ul>
+                </table>
+            </div>
+            <div id="content" style="height: 100px;">
+                <h3 class="heading">Health Queries</h3>
+                <p class="para">Have questions about your health? Find answers to all your health queries regarding sexual health, gastroenterological disorders, gynaecological issues, dermatological problems, cardiological diseases, and more from proficient doctors and accredited experts by using the Apollo 24|7 app and website.</p>
+            </div>
+            <!-- 8th box -->
+            <!-- 1st -->
+            <div class="bottomtext2">
+        <img src="https://newassets.apollo247.com/images/ic_logo.png">
+        <p class="bt11" style="margin-bottom: 15px; margin-top: 5px;">About Apol1o 247</p>
+        <div style="display: flex; flex-wrap: wrap;">
+            <li>About Us</li>
+            <li>Contact Us / Grievance</li>
+            <li>FAQs</li>
+            <li>Health Queries</li>
+            <li>Terms and Conditions</li>
+            <li>Returns Policy</li>
+            <li>Refund Policy</li>
+            <li>Privacy Policy</li>
+            <li>Apollo 247 Android App</li>
+            <li>Apollo 247 iOS App</li>
+            <li>Apollo 247 Sitemap</li>
+            <li>Online Doctor App</li>
+            <li>Online Medicine App</li>
+            <li>Apollo Pharmacy</li>
+        </div>
+        <p class="bt11" style="margin-bottom: 15px; margin-top: 20px;">Services</p>
+        <div style="display: flex; flex-wrap: wrap;">
+            <li>Online Doctor Consultation</li>
+            <li>Apollo Circle Membership</li>
+            <li>Online Medicines</li>
+            <li>Project Kavach</li>
+            <li>Cough Scanner</li>
+            <li>Covid Vaccine Tracker</li>
+            <li>Covid Vaccine Update</li>
+            <li>Apollo Pro Health Program</li>
+            <li>Doctors by Specialty</li>
+            <li>Doctors by City</li>
+            <li>All Doctors List</li>
+        </div>
+        <p class="bt11" style="margin-bottom: 15px; margin-top: 20px;">Top Specialties</p>
+        <div style="display: flex; flex-wrap: wrap;">
+            <li>Covid Consultation</li>
+            <li>Consult Physicians</li>
+            <li>Consult Dermatologists</li>
+            <li>Consult Paediatricians</li>
+            <li>Consult Gynaecologists</li>
+            <li>Consult Gastroenterologists</li>
+            <li>Consult Cardiologists</li>
+            <li>Consult Dietitians</li>
+            <li>Consult ENT Specialists</li>
+            <li>Consult Geriatricians</li>
+            <li>Consult Diabetologists</li>
+        </div>
+        <p class="bt11" style="margin-bottom: 15px; margin-top: 20px;">Book Lab Tests at Home</p>
+        <div style="display: flex; flex-wrap: wrap;">
+            <li>RT PCR Test At Home</li>
+            <li>Book Lab Tests at Home</li>
+            <li>Renal Profile (KFT, RFT Test)</li>
+            <li>Hemogram Test</li>
+            <li>Lipid Profile Test</li>
+            <li>Thyroid Profile Test (T3 T4 Tsh Test)</li>
+            <li>D Dimer Test</li>
+            <li>Urine Culture Test</li>
+            <li>Complete Blood Count (CBC Test)</li>
+            <li>Widal Test</li>
+            <li>Liver Function Test (LFT Test)</li>
+        </div> 
+        <p class="bt11" style="margin-bottom: 15px; margin-top: 20px;">Product Categories</p>  
+        <div style="display: flex; flex-wrap: wrap;">
+             <li>View All Brands</li>
+             <li>Health Care</li>
+             <li>Personal Care</li>
+             <li>Baby Care</li>
+             <li>Nutrition</li>
+             <li>Healthcare Devices</li>
+             <li>Beauty Skin Care</li>
+             <li>Immunity Boosters</li>
+             <li>Coronavirus Prevention</li>
+             <li>Diabetes Care</li>
+             <li>Patanjali Coronil Kit</li>
+             <li>Mamaearth Products</li>
+        </div>
+    
+        </div>
+    </div> 
+    </div>   
+        
+
+</body>
+</html>
